@@ -1,0 +1,330 @@
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для первой шапки */
+.first_header {
+    position: relative; /* Установите позицию элемента как относительную */
+    top: 0;
+    background-color: #070606; /* Цвет первой подложки */
+    color: #fff; /* Цвет текста в шапке */
+    text-align: center;
+    z-index: -1;
+    height: 100px; /* Установите высоту шапки в 100px */
+}
+
+/* Стили для логотипа */
+header svg.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    height: 100px; /* Установите желаемую высоту логотипа (100px) */
+    width: 140px; /* Установите ширину логотипа (237px) */
+}
+
+/* Стили для изображения в первой шапке */
+.header_image {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Размещаем изображение у правого края */
+    transform: translateY(-50%); /* Центрируем изображение по вертикали */
+    height: 100px; /* Высота изображения */
+}
+
+
+/* Стили контейнера меню */
+.text-container-menu {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: center; /* Выравниваем по центру по горизонтали */
+    margin-top: 20px; /* Добавляем отступ сверху */
+}
+
+.text {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.separator {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 20px;
+}
+
+
+/* Стили контейнера графика работы */
+.text-container-time {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Стили контейнера с номером телефона */
+.text-container-phone {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+
+/* Стили для второй шапки */
+.second_header {
+    position: relative; /* Установите позицию элемента как относительную */
+    top: 0;
+    background: linear-gradient(to right, #008e8fff, #000000ff); /* Градиент от левого края к правому */
+    color: #fff; /* Цвет текста в шапке */
+    text-align: center;
+    z-index: -1;
+    height: 60px; /* Установите высоту шапки в 100px */
+}
+
+
+
+/* Стили кнопки КАТАЛОГ */
+/* Стили для прямоугольной кнопки */
+.rectangular_button {
+    position: absolute;
+    top: 50%;
+    left: 0; /* Кнопка прикреплена к левому краю шапки */
+    transform: translateY(-50%); /* Центрирование кнопки по вертикали */
+    display: inline-block;
+    width: 300px; /* Ширина кнопки */
+    height: 60px; /* Высота кнопки */
+    background-color: #008e8f; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 60px; /* Высота строки текста */
+    border: none; /* Убираем границу кнопки */
+    cursor: pointer; /* Изменение курсора при наведении */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    font-family: 'Comfortaa', sans-serif; /* Шрифт Comfortaa */
+}
+
+
+
+
+/* Стили для поиска */
+.search-form {
+    position: absolute;
+    top: 50%;
+    left: calc(300px + 10px); /* Помещаем форму поиска с отступом в 10 пикселей от кнопки "КАТАЛОГ" */
+    transform: translateY(-50%); /* Центрируем форму по вертикали */
+    max-width: calc(100% - 310px - 330px); /* Максимальная ширина формы поиска с отступами */
+    width: 100%; /* Ширина формы поиска автоматическая */
+
+
+}
+
+.search-form input[type="text"] {
+    width: 100%; /* Растягиваем поле ввода по ширине формы */
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px; /* Увеличиваем радиус скругления до 10 пикселей */
+    font-size: 16px;
+
+}
+
+.search-form input[type="text"]::placeholder {
+    font-family: 'Comfortaa', sans-serif; /* Устанавливаем шрифт Comfortaa */
+    font-style: italic; /* Делаем текст курсивным */
+}
+
+
+.search-form button[type="submit"] {
+    height: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+/* Стили для прямоугольника после поиска */
+.rectangle {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Размещаем прямоугольник у правого края */
+    transform: translateY(-50%); /* Центрируем прямоугольник по вертикали */
+    width: 300px; /* Ширина прямоугольника */
+    height: 60px; /* Высота прямоугольника */
+    background-color: #4e4646; /* Цвет фона прямоугольника */
+    display: flex; /* Используем flexbox для выравнивания изображений */
+    justify-content: space-between; /* Равномерно распределяем изображения по горизонтали */
+    align-items: center; /* Центрируем изображения по вертикали */
+    padding: 0; /* Убираем отступы внутри прямоугольника */
+}
+
+.rectangle img {
+    width: 60px; /* Ширина изображения */
+    height: 60px; /* Высота изображения */
+    cursor: pointer; /* Изменение курсора при наведении */
+    margin-right: 75px;
+}
+
+.rectangle img:first-child {
+    margin-right: 165px; /* Отступ между первой и второй картинкой */
+}
+
+.rectangle img:hover {
+    opacity: 0.7; /* Изменяем прозрачность при наведении */
+}
+
+
+
+/* Стили для тела страницы */
+
+/* Стили для слайдера */
+
+.full-page-slider {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Растягиваем на всю ширину экрана */
+}
+
+.slider {
+    width: 100%; /* Ширина слайдера на всю страницу */
+    height: 100%; /* Высота слайдера на всю страницу */
+}
+
+.slide {
+    margin: 0 0px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #070606;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif; /* Применяем шрифт Comfortaa */
+}
+
+.center-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 2px;
+  background-color: #000;
+  z-index: 999;
+}
+
+/* Стили для мобильных устройств (ширина до 768px) */
+@media only screen and (max-width: 768px) {
+    /* Ваши стили для мобильных устройств */
+}
+
+/* Стили для планшетов (ширина от 768px до 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ваши стили для планшетов */
+}
+
+/* Стили для десктопов (ширина от 1024px) */
+@media only screen and (min-width: 1024px) {
+    /* Ваши стили для десктопов */
+}
+
+
