@@ -1,1 +1,3 @@
-# online_store_demo_website_jango
+# Online store demo website jango
+
+# Демо сайт интернет магазина
