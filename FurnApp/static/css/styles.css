@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* Стили для первой шапки */
+/* Стили для первой шапки --------------------------------------------------------------------------------------------*/
 .first_header {
     position: relative; /* Установите позицию элемента как относительную */
     top: 0;
@@ -38,7 +38,6 @@ header svg.logo {
     height: 100px; /* Высота изображения */
 }
 
-
 /* Стили контейнера меню */
 .text-container-menu {
     display: flex; /* Используем flexbox для выравнивания */
@@ -59,38 +58,19 @@ header svg.logo {
     margin: 0 20px;
 }
 
-
-/* Стили контейнера графика работы */
-.text-container-time {
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Стили контейнера с номером телефона */
-.text-container-phone {
-    display: inline-block;
-    margin-right: 100px;
-}
-
-
-/* Стили для второй шапки */
+/* Стили для второй шапки --------------------------------------------------------------------------------------------*/
 .second_header {
     position: relative; /* Установите позицию элемента как относительную */
     top: 0;
     background: linear-gradient(to right, #008e8fff, #000000ff); /* Градиент от левого края к правому */
     color: #fff; /* Цвет текста в шапке */
     text-align: center;
-    z-index: -1;
+    z-index: 0;
     height: 60px; /* Установите высоту шапки в 100px */
 }
 
-
-
 /* Стили кнопки КАТАЛОГ */
-/* Стили для прямоугольной кнопки */
-.rectangular_button {
+.catalog-button {
     position: absolute;
     top: 50%;
     left: 0; /* Кнопка прикреплена к левому краю шапки */
@@ -107,9 +87,17 @@ header svg.logo {
     font-size: 16px; /* Размер шрифта */
     font-weight: bold; /* Жирный текст */
     font-family: 'Comfortaa', sans-serif; /* Шрифт Comfortaa */
+    z-index: 1; /* Установите z-index на значение больше, чем у .second_header */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона */
 }
 
+.catalog-button:hover {
+    background-color: #005f60; /* Изменение цвета фона при наведении */
+}
 
+.catalog-button:active {
+    background-color: #003c3d; /* Изменение цвета фона при нажатии */
+}
 
 
 /* Стили для поиска */
@@ -120,7 +108,6 @@ header svg.logo {
     transform: translateY(-50%); /* Центрируем форму по вертикали */
     max-width: calc(100% - 310px - 330px); /* Максимальная ширина формы поиска с отступами */
     width: 100%; /* Ширина формы поиска автоматическая */
-
 
 }
 
@@ -169,6 +156,7 @@ header svg.logo {
     padding: 0; /* Убираем отступы внутри прямоугольника */
 }
 
+/* Стили кнопок в прямоугольнике */
 .rectangle img {
     width: 60px; /* Ширина изображения */
     height: 60px; /* Высота изображения */
@@ -186,7 +174,26 @@ header svg.logo {
 
 
 
-/* Стили для тела страницы */
+/* Стили для тела страницы -------------------------------------------------------------------------------------------*/
+#catalog {
+    display: none;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.categories {
+    width: 30%;
+    padding: 10px;
+}
+
+.details {
+    width: 70%;
+    padding: 10px;
+}
+
+
+
 
 /* Стили для слайдера */
 

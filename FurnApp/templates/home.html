@@ -20,23 +20,25 @@
 </head>
 
 <body>
-    <!-- Первая шапка сайта -->
+    <!-- Первая шапка сайта ------------------------------------------------------------------------------------------->
         <header class="first_header">
             <!-- Логотип -->
             <svg class="logo" xmlns="http://www.w3.org/2000/svg">
                 <image href="{% static 'svg/logo2.svg' %}"/>
             </svg>
 
+            <!-- ЛК -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="header_image">
                 <img src="{% static 'svg/LK.svg' %}" alt="Изображение" class="header_image">
             </svg>
 
         </header>
 
-    <!-- Вторая шапка сайта -->
+    <!-- Вторая шапка сайта ------------------------------------------------------------------------------------------->
         <header class="second_header">
             <!-- Кнопка КАТАЛОГ -->
-            <button class="rectangular_button">КАТАЛОГ</button>
+            <button class="catalog-button">КАТАЛОГ</button>
+
 
             <!-- Поиск -->
             <form action="/search" method="get" class="search-form">
@@ -49,10 +51,27 @@
                 <img src="{% static 'svg/cart.svg' %}" alt="Изображение" class="header_image">
             </div>
 
-
         </header>
 
-    <!-- Тело страницы -->
+    <!-- Тело страницы ------------------------------------------------------------------------------------------------>
+    <div id="page-content">
+        <!-- Другой контент страницы -->
+    </div>
+
+    <div id="catalog" style="display: none;">
+        <div class="categories">
+            <!-- Здесь будут отображаться категории -->
+        </div>
+        <div class="details">
+            <!-- Здесь будет отображаться подробная информация по выбранной категории -->
+        </div>
+    </div>
+
+    <script src="{% static 'js/catalog.js' %}"></script>
+
+
+
+     <!-- <x>>
         <div class="full-page-slider">
             <div class="slider">
                 <div class="slide"><img src="{% static 'images/slider/slide_.svg' %}" alt="Slide 1"></div>
@@ -60,8 +79,10 @@
                 <div class="slide"><img src="{% static 'images/slide3.jpg' %}" alt="Slide 3"></div>
             </div>
         </div>
+    </!--<x>-->
+
     
-    <!-- Подвал сайта -->
+    <!-- Подвал сайта ------------------------------------------------------------------------------------------------->
     <footer>
         <div class="text-container-menu">
             <span class="text">ДОСТАВКА</span>
