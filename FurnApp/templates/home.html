@@ -53,21 +53,28 @@
 
         </header>
 
-    <!-- Тело страницы ------------------------------------------------------------------------------------------------>
-    <div id="page-content">
-        <!-- Другой контент страницы -->
-    </div>
-
-    <div id="catalog" style="display: none;">
-        <div class="categories">
-            <!-- Здесь будут отображаться категории -->
+        <!-- Тело страницы ------------------------------------------------------------------------------------------------>
+        <div id="page-content">
+            <!-- Другой контент страницы -->
         </div>
+
+        <div id="catalog" style="display: none;">
+            <div class="categories">
+                {% for category in categories %}
+                    <div class="category-block">
+                        <h2>{{ category.name }}</h2>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
         <div class="details">
-            <!-- Здесь будет отображаться подробная информация по выбранной категории -->
+            <!-- Здесь будут отображаться подкатегории -->
         </div>
-    </div>
 
-    <script src="{% static 'js/catalog.js' %}"></script>
+        <script src="{% static 'js/catalog.js' %}"></script>
+
+
 
 
 

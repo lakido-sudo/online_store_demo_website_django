@@ -21,25 +21,16 @@ class Product(models.Model):
 
 
 class Category(models.Model):
-    """Объект категория"""
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(unique=True, default='default-slug')
     description = models.TextField(blank=True)
-    parent_category = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True,
-                                        related_name='child_categories')
-
-    def __str__(self):
-        return self.name
-
+    parent_category = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='child_categories')
 
 class Subcategory(models.Model):
-    """Объект подкатегория"""
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='subcategories')
 
-    def __str__(self):
-        return self.name
 
 
 class Order(models.Model):

@@ -11,7 +11,7 @@ def home(request):
 
 def category_list(request):
     categories = Category.objects.all()
-    data = [{'name': category.name, 'slug': category.slug} for category in categories]
+    data = [{'name': category.name, 'slug': category.slug, 'subcategories': list(category.subcategories.all().values('name', 'slug'))} for category in categories]
     return JsonResponse(data, safe=False)
 
 

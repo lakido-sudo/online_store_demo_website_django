@@ -176,21 +176,59 @@ header svg.logo {
 
 /* Стили для тела страницы -------------------------------------------------------------------------------------------*/
 #catalog {
-    display: none;
+    display: flex;
     flex-direction: row;
     background-color: #f1f1f1;
     padding: 20px;
 }
 
 .categories {
+    display: flex;
+    flex-direction: column;
     width: 30%;
     padding: 10px;
+    margin-right: 20px; /* Добавляем отступ справа для блока категорий */
+}
+
+.category-block {
+    width: 300px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.category-block h2 {
+    font-size: 18px;
+    margin: 0;
 }
 
 .details {
+    display: flex;
+    flex-direction: column;
     width: 70%;
     padding: 10px;
+    display: none; /* Скрываем блок подкатегорий по умолчанию */
 }
+
+.subcategories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Переносим подкатегории на новую строку при необходимости */
+}
+
+.subcategory-block {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+
 
 
 
