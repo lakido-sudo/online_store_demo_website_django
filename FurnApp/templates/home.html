@@ -52,27 +52,21 @@
             </div>
 
         </header>
-
-        <!-- Тело страницы ------------------------------------------------------------------------------------------------>
+        <!-- Тело страницы -->
         <div id="page-content">
             <!-- Другой контент страницы -->
         </div>
 
         <div id="catalog" style="display: none;">
-            <div class="categories">
-                {% for category in categories %}
-                    <div class="category-block">
-                        <h2>{{ category.name }}</h2>
-                    </div>
-                {% endfor %}
+            <div class="catalog-container">
+                <div class="categories"></div>
+                <div class="subcategories"></div>
             </div>
         </div>
 
-        <div class="details">
-            <!-- Здесь будут отображаться подкатегории -->
-        </div>
-
         <script src="{% static 'js/catalog.js' %}"></script>
+
+
 
 
 
