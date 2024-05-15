@@ -26,6 +26,10 @@ class Category(models.Model):
     description = models.TextField(blank=True)
     parent_category = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='child_categories')
 
+    def __str__(self):
+        return self.name
+
+
 class Subcategory(models.Model):
     name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(unique=True)

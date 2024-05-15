@@ -173,10 +173,10 @@ header svg.logo {
 }
 
 
-
+/* Каталог -----------------------------------------------------------------------------------------------------------*/
 #catalog {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #f1f1f1;
     padding: 0px;
 }
@@ -184,48 +184,48 @@ header svg.logo {
 .catalog-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between; /* Распределяем блоки по горизонтали */
 }
 
 .categories {
     display: flex;
     flex-direction: column;
     width: 300px; /* Ширина блока категорий */
-    margin-right: 20px;
+    margin-right: 0px;
 }
 
 .category-block {
     background-color: #f0f0f0;
     border: none; /* Убираем рамку */
-    padding: 10px 110px;
-    margin-bottom: 10px;
+    padding: 20px 110px;
+    margin-bottom: 0px;
     cursor: pointer;
 
 }
-
 
 .category-block.selected {
     background-color: #866f6f;
     color: white; /* Чтобы текст был читабельным на темном фоне */
 }
 
-
 .subcategories {
     font-family: 'Comfortaa', cursive;
-    width: 400px; /* Ширина блока подкатегорий */
+    flex-grow: 1; /* Позволяет .subcategories растягиваться */
+    background-color: #afdcdc; /* Сероватый оттенок фона */
+    padding: 10px; /* Добавляем отступы внутри блока */
+    box-sizing: border-box; /* Учитываем padding в расчетах ширины блока */
 }
 
 .filters {
-    width: 200px; /* Ширина блока фильтров */
+    position: relative;
+    width: 300px; /* Ширина блока фильтров */
+    background-color: #008e8f; /* Цвет фона блока */
+    padding: 10px;
+    box-sizing: border-box; /* Учитываем padding в расчетах высоты блока */
 }
 
 
-
-
-
-
-
-
-/* Стили для слайдера */
+/* Стили для слайдера ------------------------------------------------------------------------------------------------*/
 
 .full-page-slider {
     flex: 1;
