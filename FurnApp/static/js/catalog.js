@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const catalogButton = document.querySelector('.catalog-button');
     const catalogContainer = document.getElementById('catalog');
     const categoriesDiv = document.querySelector('.categories');
-    const subcategoriesDiv = document.querySelector('.subcategories');
+    const categoryElements = [];
 
     catalogButton.addEventListener('click', function() {
         if (catalogContainer.style.display === 'none') {
@@ -12,35 +12,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 .then(response => response.json())
                 .then(data => {
                     categoriesDiv.innerHTML = ''; // Очистка предыдущих категорий
-                    subcategoriesDiv.innerHTML = ''; // Очистка предыдущих подкатегорий
 
                     data.forEach(category => {
                         const categoryElement = document.createElement('div');
                         categoryElement.classList.add('category-block');
                         categoryElement.textContent = category.name;
 
-                        categoryElement.addEventListener('click', function() {
-                            // Удалить класс selected со всех блоков категорий
-                            const categoryBlocks = document.querySelectorAll('.category-block');
-                            categoryBlocks.forEach(block => block.classList.remove('selected'));
+                        const subcategoriesDiv = document.createElement('div');
+                        subcategoriesDiv.classList.add('subcategories');
 
-                            // Добавить класс selected к выбранному блоку категории
-                            this.classList.add('selected');
+                        categoryElement.addEventListener('click', function() {
+                            if (categoryElement.classList.contains('selected')) {
+                                categoryElement.classList.remove('selected');
+                                subcategoriesDiv.style.display = 'none';
+                            } else {
+                                categoryElement.classList.add('selected');
+                                subcategoriesDiv.style.display = 'block';
+                            }
+
+                            // Очистить предыдущие подкатегории
+                            subcategoriesDiv.innerHTML = '';
 
                             // Загрузить подкатегории для выбранной категории
                             const subcategories = category.subcategories;
-                            subcategoriesDiv.innerHTML = `
-                                <h2>${category.name}</h2>
-                                <div class="subcategory-blocks">
-                                    ${subcategories.map(subcategory => `
-                                        <div class="subcategory-block">${subcategory.name}</div>
-                                    `).join('')}
-                                </div>
-                            `;
+                            subcategories.forEach(subcategory => {
+                                const subcategoryElement = document.createElement('div');
+                                subcategoryElement.classList.add('subcategory-block');
+                                subcategoryElement.textContent = subcategory.name;
+                                subcategoriesDiv.appendChild(subcategoryElement);
+                            });
                         });
 
-
                         categoriesDiv.appendChild(categoryElement);
+                        categoriesDiv.appendChild(subcategoriesDiv);
+                        categoryElements.push(categoryElement);
+                        categoryElements.push(subcategoriesDiv);
                     });
                 });
         } else {

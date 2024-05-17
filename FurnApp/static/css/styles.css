@@ -194,13 +194,16 @@ header svg.logo {
     margin-right: 0px;
 }
 
+.categories h3 {
+    display: none; /* Скрываем заголовок "Категории" в блоке .categories */
+}
+
 .category-block {
     background-color: #f0f0f0;
     border: none; /* Убираем рамку */
     padding: 20px 110px;
     margin-bottom: 0px;
     cursor: pointer;
-
 }
 
 .category-block.selected {
@@ -209,11 +212,28 @@ header svg.logo {
 }
 
 .subcategories {
-    font-family: 'Comfortaa', cursive;
-    flex-grow: 1; /* Позволяет .subcategories растягиваться */
-    background-color: #afdcdc; /* Сероватый оттенок фона */
-    padding: 10px; /* Добавляем отступы внутри блока */
-    box-sizing: border-box; /* Учитываем padding в расчетах ширины блока */
+    display: none; /* Изначально скрываем блок подкатегорий */
+    flex-direction: column; /* Отображаем подкатегории в вертикальном направлении */
+    width: 300px; /* Устанавливаем ширину блока подкатегорий */
+}
+
+.subcategories.show {
+    display: flex; /* Показываем блок подкатегорий при клике на категорию */
+}
+
+.subcategory-block {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 0px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    height: 40px; /* Устанавливаем высоту блоков подкатегорий */
+    width: 300px; /* Устанавливаем ширину блоков подкатегорий */
+}
+
+.subcategory-block.selected {
+    background-color: #a0a0a0;
+    color: white;
 }
 
 .filters {
