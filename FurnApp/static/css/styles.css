@@ -38,25 +38,21 @@ header svg.logo {
     height: 100px; /* Высота изображения */
 }
 
-/* Стили контейнера меню */
-.text-container-menu {
-    display: flex; /* Используем flexbox для выравнивания */
-    justify-content: center; /* Выравниваем по центру по горизонтали */
-    margin-top: 20px; /* Добавляем отступ сверху */
+.first_header p {
+    color: white; /* Цвет текста белый */
+    font-size: 16px; /* Размер шрифта 16 пикселей */
+    line-height: 100px; /* Выравнивание текста по центру по вертикали */
+    margin: 0; /* Убираем внешние отступы */
+    position: absolute; /* Позиционирование абсолютное */
+    left: 110px; /* Размещаем текст слева от центра */
+    top: 50%; /* Размещаем текст по центру вертикально */
+    transform: translateY(-50%); /* Центрируем текст по вертикали */
+    z-index: 1; /* Устанавливаем z-index для управления порядком наложения */
+    font-family: 'Comfortaa', sans-serif; /* Шрифт Comfortaa */
 }
 
-.text {
-    font-family: 'Comfortaa', sans-serif;
-    font-size: 16px;
-    color: #fff;
-}
 
-.separator {
-    font-family: 'Comfortaa', sans-serif;
-    font-size: 16px;
-    color: #fff;
-    margin: 0 20px;
-}
+
 
 /* Стили для второй шапки --------------------------------------------------------------------------------------------*/
 .second_header {
@@ -185,8 +181,8 @@ header svg.logo {
     display: flex;
     flex-direction: row;
     justify-content: space-between; /* Распределяем блоки по горизонтали */
-}
 
+}
 .categories {
     display: flex;
     flex-direction: column;
@@ -222,14 +218,18 @@ header svg.logo {
 }
 
 .subcategory-block {
-    background-color: #e0e0e0;
+    background-color: #ebecf0;
     border: none;
     padding: 0px;
     margin-bottom: 2px;
     cursor: pointer;
     height: 40px; /* Устанавливаем высоту блоков подкатегорий */
     width: 300px; /* Устанавливаем ширину блоков подкатегорий */
+    text-indent: 10px; /* Смещение текста вправо */
+    display: flex;
+    align-items: center;
 }
+
 
 .subcategory-block.selected {
     background-color: #a0a0a0;
@@ -239,7 +239,7 @@ header svg.logo {
 .filters {
     position: relative;
     width: 300px; /* Ширина блока фильтров */
-    background-color: #008e8f; /* Цвет фона блока */
+    background-color: #ebecf0; /* Цвет фона блока */
     padding: 10px;
     box-sizing: border-box; /* Учитываем padding в расчетах высоты блока */
 }
