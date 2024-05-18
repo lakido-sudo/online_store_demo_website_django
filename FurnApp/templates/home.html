@@ -59,16 +59,41 @@
             <div id="page-content">
                 <!-- Другой контент страницы -->
             </div>
+
             <!-- Контейнер КАТАЛОГА -->
             <div id="catalog" style="display: none;">
+
                 <!-- Контейнер для КАТЕГОРИЙ-ПОДКАТЕРГОРИЙ -->
                 <div class="catalog-container">
                     <div class="categories">
                         <div class="subcategories"></div>
                     </div>
-                    <div class="filters"></div>
                 </div>
+
+                <!-- Контейнер для превью товаров -->
+                <div class="product-preview">
+                    <div class="product-preview-header">Выберите подкатегорию в каталоге или воспользуйтесь поиском</div>
+                    <div class="product-image"></div>
+                    <div class="product-price"></div>
+                    <div class="product-manufacturer"></div>
+                    <div class="product-model"></div>
+                </div>
+
+                <!-- Контейнер для ФИЛЬТРА -->
+                <div class="filters">
+                    <div class="filter-header">ФИЛЬТР</div>
+                    <div class="filter-content">
+                        <div class="filter-price-header">Цена</div>
+                        <div class="filter-price-inputs">
+                            <input type="number" class="filter-price-ot" placeholder="От">
+                            <input type="number" class="filter-price-do" placeholder="До">
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+
             <!-- Скрипт КАТАЛОГА -->
             <script src="{% static 'js/catalog.js' %}"></script>
 
