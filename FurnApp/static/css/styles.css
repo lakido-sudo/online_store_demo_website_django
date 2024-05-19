@@ -70,6 +70,7 @@ header svg.logo {
     left: 0; /* Кнопка прикреплена к левому краю шапки */
     transform: translateY(-50%); /* Центрирование кнопки по вертикали */
     display: inline-block;
+    border: 2px solid #0e8385; /* Внутренняя рамочка */
     width: 300px; /* Ширина кнопки */
     height: 60px; /* Высота кнопки */
     background-color: #008e8f; /* Цвет фона кнопки */
