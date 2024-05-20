@@ -1,0 +1,502 @@
+/* styles.css */
+
+/* Общие стили */
+html, body {
+    height: 100%; /* Установить высоту для html и body на 100% */
+    margin: 0; /* Убрать внешние отступы */
+    padding: 0; /* Убрать внутренние отступы */
+}
+
+/* Стили для первой шапки --------------------------------------------------------------------------------------------*/
+.first_header {
+    position: relative; /* Установите позицию элемента как относительную */
+    top: 0;
+    background-color: #070606; /* Цвет первой подложки */
+    color: #fff; /* Цвет текста в шапке */
+    text-align: center;
+    z-index: -1;
+    height: 100px; /* Установите высоту шапки в 100px */
+}
+
+/* Стили для номера телефона */
+.first_header p {
+    color: white; /* Цвет текста белый */
+    font-size: 16px; /* Размер шрифта 16 пикселей */
+    line-height: 100px; /* Выравнивание текста по центру по вертикали */
+    margin: 0; /* Убираем внешние отступы */
+    position: absolute; /* Позиционирование абсолютное */
+    left: 110px; /* Размещаем текст слева от центра */
+    top: 50%; /* Размещаем текст по центру вертикально */
+    transform: translateY(-50%); /* Центрируем текст по вертикали */
+    z-index: 1; /* Устанавливаем z-index для управления порядком наложения */
+    font-family: 'Comfortaa', sans-serif; /* Шрифт Comfortaa */
+}
+
+/* Стили для логотипа */
+header svg.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    height: 100px; /* Установите желаемую высоту логотипа (100px) */
+    width: 140px; /* Установите ширину логотипа (237px) */
+}
+
+/* Стили для изображения в первой шапке */
+.header_image {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Размещаем изображение у правого края */
+    transform: translateY(-50%); /* Центрируем изображение по вертикали */
+    height: 100px; /* Высота изображения */
+}
+
+/* Стили для второй шапки --------------------------------------------------------------------------------------------*/
+.second_header {
+    position: relative; /* Установите позицию элемента как относительную */
+    top: 0;
+    background: linear-gradient(to right, #008e8fff, #000000ff); /* Градиент от левого края к правому */
+    color: #fff; /* Цвет текста в шапке */
+    text-align: center;
+    z-index: 0;
+    height: 60px; /* Установите высоту шапки в 100px */
+}
+
+/* Стили кнопки КАТАЛОГ */
+.catalog-button {
+    position: absolute;
+    top: 50%;
+    left: 0; /* Кнопка прикреплена к левому краю шапки */
+    transform: translateY(-50%); /* Центрирование кнопки по вертикали */
+    display: inline-block;
+    border: 2px solid #0e8385; /* Внутренняя рамочка */
+    width: 300px; /* Ширина кнопки */
+    height: 60px; /* Высота кнопки */
+    background-color: #008e8f; /* Цвет фона кнопки */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 60px; /* Высота строки текста */
+    border: none; /* Убираем границу кнопки */
+    cursor: pointer; /* Изменение курсора при наведении */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    font-family: 'Comfortaa', sans-serif; /* Шрифт Comfortaa */
+    z-index: 1; /* Установите z-index на значение больше, чем у .second_header */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона */
+}
+
+.catalog-button:hover {
+    background-color: #005f60; /* Изменение цвета фона при наведении */
+}
+
+.catalog-button:active {
+    background-color: #003c3d; /* Изменение цвета фона при нажатии */
+}
+
+
+/* Стили для поиска */
+.search-form {
+    position: absolute;
+    top: 50%;
+    left: calc(300px + 10px); /* Помещаем форму поиска с отступом в 10 пикселей от кнопки "КАТАЛОГ" */
+    transform: translateY(-50%); /* Центрируем форму по вертикали */
+    max-width: calc(100% - 310px - 330px); /* Максимальная ширина формы поиска с отступами */
+    width: 100%; /* Ширина формы поиска автоматическая */
+
+}
+
+.search-form input[type="text"] {
+    width: 100%; /* Растягиваем поле ввода по ширине формы */
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px; /* Увеличиваем радиус скругления до 10 пикселей */
+    font-size: 16px;
+
+}
+
+.search-form input[type="text"]::placeholder {
+    font-family: 'Comfortaa', sans-serif; /* Устанавливаем шрифт Comfortaa */
+    font-style: italic; /* Делаем текст курсивным */
+}
+
+
+.search-form button[type="submit"] {
+    height: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+/* Стили для прямоугольника после поиска */
+.rectangle {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Размещаем прямоугольник у правого края */
+    transform: translateY(-50%); /* Центрируем прямоугольник по вертикали */
+    width: 300px; /* Ширина прямоугольника */
+    height: 60px; /* Высота прямоугольника */
+    background-color: #4e4646; /* Цвет фона прямоугольника */
+    display: flex; /* Используем flexbox для выравнивания изображений */
+    justify-content: space-between; /* Равномерно распределяем изображения по горизонтали */
+    align-items: center; /* Центрируем изображения по вертикали */
+    padding: 0; /* Убираем отступы внутри прямоугольника */
+}
+
+/* Стили кнопок в прямоугольнике */
+.rectangle img {
+    width: 60px; /* Ширина изображения */
+    height: 60px; /* Высота изображения */
+    cursor: pointer; /* Изменение курсора при наведении */
+    margin-right: 75px;
+}
+
+.rectangle img:first-child {
+    margin-right: 165px; /* Отступ между первой и второй картинкой */
+}
+
+.rectangle img:hover {
+    opacity: 0.7; /* Изменяем прозрачность при наведении */
+}
+
+
+/* Каталог -----------------------------------------------------------------------------------------------------------*/
+#catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.catalog-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Распределяем блоки по горизонтали */
+
+}
+.categories {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Ширина блока категорий */
+    margin-right: 0px;
+
+}
+
+.categories h3 {
+    display: none; /* Скрываем заголовок "Категории" в блоке .categories */
+}
+
+.category-block {
+    display: flex; /* Делаем блок flex-контейнером */
+    align-items: center; /* Центрируем текст по вертикали */
+    background-color: #f0f0f0;
+    border: none;
+    height: 60px;
+    padding: 0px 110px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+.category-block.selected {
+    background-color: #866f6f;
+    color: white; /* Чтобы текст был читабельным на темном фоне */
+}
+
+.subcategories {
+    display: none; /* Изначально скрываем блок подкатегорий */
+    flex-direction: column; /* Отображаем подкатегории в вертикальном направлении */
+    width: 300px; /* Устанавливаем ширину блока подкатегорий */
+
+}
+
+.subcategories.show {
+    display: flex; /* Показываем блок подкатегорий при клике на категорию */
+}
+
+.subcategory-block {
+    background-color: #ebecf0;
+    border: none;
+    padding: 0px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    height: 40px; /* Устанавливаем высоту блоков подкатегорий */
+    width: 300px; /* Устанавливаем ширину блоков подкатегорий */
+    text-indent: 10px; /* Смещение текста вправо */
+    display: flex;
+    align-items: center;
+    font-family: 'Comfortaa', sans-serif; /* Устанавливаем шрифт Comfortaa */
+}
+
+
+.subcategory-block.selected {
+    background-color: #a0a0a0;
+    color: white;
+}
+
+/* Стили для ПРЕВЬЮ ТОВАРОВ */
+.product-preview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto; /* Высота будет определяться содержимым */
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.product-preview-header {
+    display: flex; /* Делаем блок flex-контейнером */
+    align-items: center; /* Центрируем текст по вертикали */
+    font-family: 'Comfortaa', sans-serif;
+    justify-content: center;
+    background-color: #d1d1d1;
+    height: 60px;
+    font-style: italic; /* Делаем текст курсивным */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+}
+
+
+.subcategory-name {
+    height: 50px;
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comfortaa', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+
+.product-image {
+    height: 150px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.product-price, .product-manufacturer, .product-model {
+    font-family: 'Comfortaa', sans-serif;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #333;
+}
+
+.product-manufacturer, .product-model {
+    color: #666;
+}
+
+/* Стили для ФИЛЬТРА */
+.filters {
+    position: relative;
+    width: 300px; /* Ширина блока фильтров */
+    background-color: #ebecf0; /* Цвет фона блока */
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box; /* Учитываем padding в расчетах высоты блока */
+    height: 100%; /* Высота будет 100% от родительского блока */
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Предотвращаем сжатие блока фильтров */
+}
+
+.filter-header {
+    background-color: #f0f0f0; /* Цвет фона прямоугольного блока */
+    color: #333; /* Цвет текста */
+    padding: 0 0px; /* Внутренний отступ по горизонтали */
+    height: 60px; /* Высота блока */
+    display: flex;
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center; /* Центрируем текст по вертикали */
+    font-family: 'Comfortaa', sans-serif; /* Устанавливаем шрифт Comfortaa */
+}
+
+.filter-content {
+    background-color: #d1d1d1; /* Цвет фона блока с содержимым */
+    padding: 10px; /* Внутренний отступ */
+    flex: 1; /* Растягиваем блок по высоте */
+}
+
+.filter-price-header {
+    display: flex;
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center; /* Центрируем текст по вертикали */
+    font-family: 'Comfortaa', sans-serif; /* Устанавливаем шрифт Comfortaa */
+    margin-bottom: 20px; /* Добавляем отступ снизу для заголовка */
+}
+
+.filter-price-inputs {
+    display: flex;
+    flex-direction: row; /* Располагаем элементы вертикально */
+    align-items: stretch; /* Растягиваем input-элементы по ширине */
+}
+
+.filter-price-ot, .filter-price-do {
+    width: 45%; /* Ширина input-элементов */
+    height: 20px; /* Высота input-элементов */
+    padding: 10px; /* Внутренний отступ */
+    border: 1px solid #ccc; /* Рамка input-элементов */
+    border-radius: 5px; /* Радиус скругления углов input-элементов */
+    font-family: 'Comfortaa', sans-serif; /* Устанавливаем шрифт Comfortaa */
+    margin-right: 5px; /* Добавляем отступ справа для первого инпута */
+    margin-left: 5px; /* Добавляем отступ слева для второго инпута */
+}
+
+
+
+/* Стили для слайдера ------------------------------------------------------------------------------------------------*/
+
+.full-page-slider {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Растягиваем на всю ширину экрана */
+}
+
+.slider {
+    width: 100%; /* Ширина слайдера на всю страницу */
+    height: 100%; /* Высота слайдера на всю страницу */
+}
+
+.slide {
+    margin: 0 0px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #070606;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif; /* Применяем шрифт Comfortaa */
+}
+
+.center-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 2px;
+  background-color: #000;
+  z-index: 999;
+}
+
+/* Стили для мобильных устройств (ширина до 768px) */
+@media only screen and (max-width: 768px) {
+    /* Ваши стили для мобильных устройств */
+}
+
+/* Стили для планшетов (ширина от 768px до 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ваши стили для планшетов */
+}
+
+/* Стили для десктопов (ширина от 1024px) */
+@media only screen and (min-width: 1024px) {
+    /* Ваши стили для десктопов */
+}
+
+
