@@ -1,20 +1,15 @@
 # Online store demo website Django
-
 # Демо сайт интернет магазина на фреймворке Django
-[![el5.png](https://i.postimg.cc/KYgPt1Vh/el5.png)](https://postimg.cc/R34JBZ4g)
-## Все файлы находятся в ветке [master](https://github.com/lakido-sudo/online_store_demo_website_jango/tree/master)
-### _В разработке_
-# Project Title
 
-One Paragraph of project description goes here
+[![el5.png](https://i.postimg.cc/KYgPt1Vh/el5.png)](https://postimg.cc/R34JBZ4g)
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Все файлы находятся в ветке [master](https://github.com/lakido-sudo/online_store_demo_website_jango/tree/master)
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+### _В разработке_
 
 ```
 Give examples
